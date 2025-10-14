@@ -1,0 +1,49 @@
+document.addEventListener('DOMContentLoaded', ()=> {
+  const yearEl = document.getElementById('year'); yearEl.textContent = new Date().getFullYear();
+  const whatsappBase = 'https://wa.me/94';
+  const contactNumber = '0752001179';
+  const waLink = whatsappBase + contactNumber.replace(/^0/, '');
+  document.getElementById('whatsapp').href = waLink;
+  document.getElementById('wa2').href = waLink;
+
+  const tours = [
+    { id:1, img:'assets/sigiriya.jpg', title_en:'Cultural Triangle – 5D / 4N', highlights:['Sigiriya','Dambulla','Polonnaruwa','Kandy'], price:{budget:85000} },
+    { id:2, img:'assets/ella.jpg', title_en:'Hill Country – 5D / 4N', highlights:['Kandy','Nuwara Eliya','Ella'], price:{budget:90000} },
+    { id:3, img:'assets/mirissa.jpg', title_en:'Beach & Leisure – 5D / 4N', highlights:['Galle','Mirissa','Bentota'], price:{budget:80000} },
+  ];
+
+  let lang = 'en';
+  const langBtn = document.getElementById('langToggle');
+  function renderTours(){
+    const grid = document.getElementById('toursGrid');
+    grid.innerHTML = '';
+    tours.forEach(t => {
+      const card = document.createElement('article');
+      card.className = 'tour-card';
+      card.innerHTML = `
+        <img src="${t.img}" alt="${t.title_en}">
+        <h4>${t.title_en}</h4>
+        <ul>${t.highlights.map(h=>`<li>${h}</li>`).join('')}</ul>
+        <div class="card-bottom">
+          <div>
+            <div style="font-size:12px;color:#9CA3AF">From (2 pax)</div>
+            <div style="font-weight:700">LKR ${t.price.budget.toLocaleString()}</div>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="mailto:thetravelmass@gmail.com?subject=Booking%20enquiry%20${t.id}">Book Now</a>
+            <div style="margin-top:8px"><a href="${waLink}" style="font-size:12px">Chat on WhatsApp</a></div>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+  renderTours();
+
+  langBtn.addEventListener('click', ()=>{
+    lang = (lang==='en') ? 'fr' : 'en';
+    langBtn.textContent = (lang==='en') ? 'FR' : 'EN';
+    document.getElementById('hero-title').textContent = (lang==='en') ? 'Explore Sri Lanka with curated tours' : 'Découvrez le Sri Lanka avec des circuits sur mesure';
+    renderTours();
+  });
+});
