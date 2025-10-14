@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelMass.lk - Discover Sri Lanka</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f4f9f9;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    nav {
+      background-color: #004aad;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1579154204601-01588f351e35?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .places {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #007bff;
+    }
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌴 TravelMass.lk</h1>
+    <p>Your ultimate travel guide to Sri Lanka</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Destinations</a>
+    <a href="#">Hotels</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Explore the Beauty of Sri Lanka 🇱🇰</h2>
+  </div>
+
+  <section>
+    <h2>Top Places to Visit</h2>
+    <div class="places">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1600181955470-cc9e1603dfd6?auto=format&fit=crop&w=800&q=80" alt="Sigiriya">
+        <h3>Sigiriya</h3>
+        <p>The iconic Lion Rock fortress in the heart of Sri Lanka.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1520211385895-7b00e49e59c8?auto=format&fit=crop&w=800&q=80" alt="Ella">
+        <h3>Ella</h3>
+        <p>Experience breathtaking views and waterfalls in the hill country.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589363088712-5a9910cfb23d?auto=format&fit=crop&w=800&q=80" alt="Galle Fort">
+        <h3>Galle Fort</h3>
+        <p>Discover colonial charm and coastal beauty in Galle.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 TravelMass.lk | Built with ❤️ in Sri Lanka</p>
+  </footer>
+</body>
+</html>
